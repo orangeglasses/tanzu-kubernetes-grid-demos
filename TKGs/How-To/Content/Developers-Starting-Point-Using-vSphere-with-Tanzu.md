@@ -18,4 +18,5 @@ A good **starting point** can be:
 1. [How to Apply a Pod Security Policy on a Tanzu Kubernetes Cluster?](How-to-Apply-a-Pod-Security-Policy-on-a-Tanzu-Kubernetes-Cluster.md)
 1. [How to create an L4 Load Balancer with NSX-ALB (Avi)?](How-to-create-an-L4-Load-Balancer-with-Avi.md) 
 1. [How to use NSX-ALB (Avi) as an L7 Ingress Controller?](How-to-use-NSX-ALB-(Avi)-as-an-L7-Ingress-Controller.md)
+1. [How to select VIP Network for L7 Ingress Controller with NSX-ALB (Avi)?](How-to-select-VIP-Network-for-L7-Ingress-Controller-with-NSX-ALB.md)
 1. [How to integrate your own Container Registry?](How-to-integrate-your-own-Container-Registry.md)

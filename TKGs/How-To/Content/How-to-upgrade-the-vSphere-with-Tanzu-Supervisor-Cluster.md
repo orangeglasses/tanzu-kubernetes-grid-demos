@@ -2,7 +2,7 @@
 
 Generally speaking VMware provides Rolling Updates for the Supervisor Cluster and the Tanzu Kubernetes Clusters. 
 
-Updating the Supervisor Cluster involves first updating your vCenter Server and ESXi Hosts. Afterwards you can trigger a Supervisor Cluster Update by doing a vSphere Namespace Update. In general updating a Supervisor Cluster will trigger a Rolling Update of the Tanzu Kuberntes Clusters.
+Updating the Supervisor Cluster involves first updating your vCenter Server and ESXi Hosts. Afterwards you can trigger a Supervisor Cluster Update by doing a vSphere Namespace Update. In general updating a Supervisor Cluster will trigger a Rolling Update of the Tanzu Kubernetes Clusters.
 
 In some cases you might need to check the Compatibility between your Tanzu Kubernetes Clusters and your Supervisor Cluster. Once done the outcome might be that you need to update your TKC first before updating your Supervisor Cluster.
 
@@ -15,7 +15,7 @@ NAME                                VERSION                          READY   COM
 v1.16.12---vmware.1-tkg.1.da7afe7   1.16.12+vmware.1-tkg.1.da7afe7   True    True         11d       [1.17.17+vmware.1-tkg.1.d44d45a 1.16.14+vmware.1-tkg.1.ada4837]
 v1.16.14---vmware.1-tkg.1.ada4837   1.16.14+vmware.1-tkg.1.ada4837   True    True         11d       [1.17.17+vmware.1-tkg.1.d44d45a]
 
-(look for the COMPATIBLE field, this fields indicate if a TKR is compatibile with your Supervisor Cluster)
+(look for the COMPATIBLE field, this field indicates if a TKR is compatibile with your Supervisor Cluster)
 
 OR
 

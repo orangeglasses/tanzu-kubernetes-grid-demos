@@ -18,7 +18,7 @@ Use Patch Method:
 https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-C285CC64-93F6-4EB3-9CBA-7903DE74755E.html
 
 
-You can also edit and re-apply the yalm file that was originally used, but this is NOT recommended. (see: https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-DF2B3886-4BE0-4E88-B549-DC9C1C653FDB.html#cluster-manifest-update-methods-2)
+You can also edit and re-apply the YAML file that was originally used, but this is NOT recommended. (see: https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-DF2B3886-4BE0-4E88-B549-DC9C1C653FDB.html#cluster-manifest-update-methods-2)
 
 ## Table of Contents
 
@@ -144,7 +144,34 @@ The Upgrade of your TKC should start.
 
 Another way to Upgrade your TKC is by using the 'kubectl patch' command. 
 
-First you need to define the name of the TKR you want to upgrade to in a $PATCH variable as shown below:
+First you need to get the 'topology' specifications from your current cluster. This can be achieved by running the following command:
+
+````
+kubectl get TKG-CLUSTER-NAME -o YAML
+
+...
+topology:
+    controlPlane:
+      replicas: 1
+      storageClass: tkg-storagepolicy
+      tkr:
+        reference:
+          name: v1.21.2---vmware.1-tkg.1.ee25d55
+      vmClass: best-effort-xsmall
+    nodePools:
+    - name: worker-nodepool-b1
+      replicas: 1
+      storageClass: tkg-storagepolicy
+      tkr:
+        reference:
+          name: v1.21.2---vmware.1-tkg.1.ee25d55
+      vmClass: best-effort-xsmall
+... 
+````
+
+Make sure to copy the topology section. 
+
+Then you need to define the name of the TKR you want to upgrade to in a $PATCH variable as shown below (do not copy directly from the example below, change it in your previously found topology section):
 ````
 $ read -r -d '' PATCH <<'EOF'
 spec:

@@ -2,6 +2,9 @@
 
 Scaling an Existing Tanzu Kubernetes Cluster is very straight forwards, it follows the same concept as scaling a Replicaset for your Application Deployments for example. 
 
+Official VMware Documentation:
+* v1alpha2 Clusters: https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-7992B7F6-9174-44F4-99BE-C0B5C45FA2EC.html
+* v1alpha1 Clusters: https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-29DA638D-23B5-4A53-9152-7BD5D5F85BFE.html
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites)
@@ -24,7 +27,7 @@ Let's increase the number of Worker Nodes from 1 to 2 in our example:
 
 
 ````
-kubectl edit <TKC-NAME>
+kubectl edit tkc <TKC-NAME>
 
 apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
