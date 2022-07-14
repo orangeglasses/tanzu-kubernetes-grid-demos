@@ -11,7 +11,7 @@ https://github.com/goharbor/harbor-helm
 VMware is using Carvel to supply, deploy and lifecycle their own projects inside their Kubernetes distributions. 
 The Harbor package is fully supported if used in TKGs and TKGm 
 
-This guys was written at a time when the Carvel package was not very mature yet.  The Carvel package is recommended for TKGm and TKG 2.0. 
+This guide was written at a time when the Carvel package was not very mature yet.  The Carvel package is recommended for TKGm and TKG 2.0. 
 For TKGs, the Bitnami helm chart is still recommended, because of sketchy kapp-controller support in TKGs
 
 For TKGm, see: (check for latest version)
