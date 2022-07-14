@@ -6,6 +6,20 @@ This file describes the steps and way Harbor was installed as part of the ITQ cu
 
 https://github.com/goharbor/harbor-helm
 
+# Carvel or Helm?
+
+VMware is using Carvel to supply, deploy and lifecycle their own projects inside their Kubernetes distributions. 
+The Harbor package is fully supported if used in TKGs and TKGm 
+
+This guys was written at a time when the Carvel package was not very mature yet.  The Carvel package is recommended for TKGm and TKG 2.0. 
+For TKGs, the Bitnami helm chart is still recommended, because of sketchy kapp-controller support in TKGs
+
+For TKGm, see: (check for latest version)
+https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.5/vmware-tanzu-kubernetes-grid-15/GUID-packages-harbor-registry.html
+
+For TCE, see: (check for latest version)
+https://tanzucommunityedition.io/docs/v0.12/package-readme-harbor-2.4.2/
+
 
 # Which Helm chart to use?
 
