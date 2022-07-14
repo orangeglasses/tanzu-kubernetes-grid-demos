@@ -2,8 +2,6 @@
 This file describes the steps and way Harbor was installed as part of the ITQ customer vSphere with Tanzu POC
 
 
-[[_TOC_]]
-
 # References
 
 https://github.com/goharbor/harbor-helm
